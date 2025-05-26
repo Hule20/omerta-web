@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+a:not(.tekst-crvena) {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tekst-crvena {
+  color: #c62828;
+}
+
+/* NAVIGACIJA */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  max-height: 90px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links > .mob-pozovi-red {
+  margin-left: 16px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  color: #111111;
+}
+
+.nav-links a:hover {
+  color: #777777;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Sidebar za mobitele */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 30px 20px;
+  color: #111111;
+  font-weight: bold;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar .nav a {
+  display: block;
+  padding: 4px 0;
+  font-size: 18px;
+}
+
+.sidebar .nav a:hover {
+  background-color: white;
+  color: #777777;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.section-margin-btm {
+  margin: 2% 0 2% 0;
+}
+
+/* HERO */
+.hero {
+  background-image: url("resources/omerta-vozilo.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  color: white;
+  padding: 120px 20px;
+  /* text-align: center; */
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: -50px auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: 28px;
+  color: #c8bdbd;
+  margin: 15px 0 10px 0;
+  padding: 0px;
+}
+
+.btn-hero {
+  background-color: #c62828;
+  color: white;
+  padding: 10px 26px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-hero:hover {
+  background-color: #777777;
+}
+
+/* KONTAKT RED */
+.kontakt-info-red {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+
+.kontakt-info-red {
+  margin-top: 2%;
+  /* background-color: #c62828; */
+}
+
+.kontakt-ikone-red {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.kontakt-ikone-red span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #c62828;
+  color: white;
+  margin: 0 8px;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt-ikone-red span:hover {
+  background-color: #777777;
+}
+
+/* O NAMA */
+#onama p {
+  text-align: justify;
+}
+
+.onama-grid {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  /* margin-top: 40px; */
+  flex-wrap: wrap;
+}
+
+.onama-tekst {
+  flex: 1 1 50%;
+}
+
+.onama-slika {
+  flex: 1 1 45%;
+  width: 100%;
+  height: 100%;
+}
+
+.onama-slika img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.onama-lista {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.onama-lista li {
+  margin-bottom: 10px;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.onama-lista i {
+  color: #c62828;
+  margin-right: 12px;
+}
+
+/* MAIN */
+main {
+  padding: 0 14%;
+}
+
+.section-subtitle {
+  font-size: 32px;
+  color: #777777;
+  border-bottom: 2px solid #777777;
+  border-radius: 2px 2px;
+}
+
+.hr-divider {
+  width: 30%;
+  border: 1px solid #777777;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.slike-radova {
+  flex: 1 1 48%;
+}
+
+.slike-radova img {
+  margin-bottom: 16px;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 11px);
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.btn-posaljite {
+  background-color: #c62828;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-posaljite:hover {
+  background-color: #777777;
+}
+
+/* FORMA I KONTAKT */
+input,
+button,
+textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.kontakt-grid {
+  display: flex;
+  gap: 60px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.kontakt-grid form {
+  flex: 1 1 50%;
+  max-width: 100%;
+}
+
+.kontakt-info {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mob-underline {
+  display: inline-block;
+}
+
+.mob-underline::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #c62828;
+  transition: 300ms;
+}
+
+.mob-underline:hover::after {
+  width: 100%;
+}
+
+.mob-border a {
+  border: 2px solid #c62828;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #c62828;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mob-border a:hover {
+  background-color: #c62828;
+  color: white;
+}
+
+/* Drustvene mreze */
+.kontakt-ikone {
+  margin: 20px auto;
+}
+
+.kontakt-ikone span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #c62828;
+  color: white;
+  margin: 0 8px;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt-ikone span:hover {
+  background-color: #777777;
+}
+
+/* INFO*/
+#info {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-o-firmi,
+.info-mapa {
+  width: 50%;
+}
+
+.vizitka {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+.info-mapa {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.info-mapa iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f5f5f5;
+  text-align: right;
+  padding: 16px;
+  margin-top: 75px;
+  color: #111111;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    color: #111111;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 4%;
+  }
+
+  /* NAV */
+  .sidebar .mob-border a {
+    padding: 4px 8px; /* smanjen horizontalni padding */
+    display: inline-block;
+    margin-top: 24px;
+  }
+
+  #info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info-mapa {
+    width: 100%;
+  }
+
+  .onama-grid {
+    flex-direction: column;
+  }
+
+  .kontakt-info {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .onama-tekst,
+  .onama-slika {
+    flex: 1 1 100%;
+  }
+
+  .kontakt-info-red {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* INFO */
+  #info {
+    flex-direction: column;
+  }
+
+  .info-o-firmi,
+  .info-mapa {
+    width: 100%;
+  }
+}

@@ -18,13 +18,13 @@
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo">
-        <img src="resources/logo.png" alt="Company Logo" />
+        <img src="resources/logo.png" alt="Omerta-Logo" />
       </div>
       <nav class="nav-links">
-        <a href="#">Početna</a>
-        <a href="#onama">O nama</a>
-        <a href="#radovi">Radovi</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#" class="red-underline">Početna</a>
+        <a href="#onama" class="red-underline">O nama</a>
+        <a href="#radovi" class="red-underline">Radovi</a>
+        <a href="#kontakt" class="red-underline">Kontakt</a>
         <div class="mob-pozovi-red">
           <span class="mob-border"
             ><a href="tel:+385995424763">+385 99 542 4763</a></span
@@ -43,7 +43,7 @@
         style="max-width: 100%; height: auto"
       />
       <div class="nav">
-        <a href="#" onclick="closeSidebar()">Početna</a>
+        <a href="#" onclick="closeSidebar()" class="red-underline">Početna</a>
         <a href="#onama" onclick="closeSidebar()">O nama</a>
         <a href="#radovi" onclick="closeSidebar()">Radovi</a>
         <a href="#kontakt" onclick="closeSidebar()">Kontakt</a>
@@ -75,10 +75,25 @@
         >
       </div>
       <div class="kontakt-ikone-red">
-        <span><i class="fa-brands fa-square-facebook fa-xl"></i></span>
-        <span><i class="fa-brands fa-square-instagram fa-xl"></i></span>
-        <span><i class="fa-brands fa-square-whatsapp fa-xl"></i></span>
+        <a
+          href="https://www.facebook.com/omertajdoo"
+          target="_blank"
+          rel="noopener"
+        >
+          <span><i class="fa-brands fa-square-facebook fa-xl"></i></span>
+        </a>
+        <a
+          href="https://www.instagram.com/omertajdoo/?igsh=cXlra3hkeXQ2ZGpp#"
+          target="_blank"
+          rel="noopener"
+        >
+          <span><i class="fa-brands fa-square-instagram fa-xl"></i></span>
+        </a>
+        <a href="https://wa.me/385995424763" target="_blank" rel="noopener">
+          <span><i class="fa-brands fa-square-whatsapp fa-xl"></i></span>
+        </a>
       </div>
+
       <div>
         <a class="tekst-crvena" href="mailto:someone@example.com"
           >omertajdoo@gmail.com</a
@@ -191,27 +206,47 @@
           </form>
           <div class="kontakt-info">
             <div class="mob-pozovi">
-              <strong>Telefon: </strong>
-              <span class="mob-underline"
-                ><a href="tel:+385995424763">+385 99 542 4763</a></span
-              >
+              <strong>Telefon:</strong><br />
+              <span class="red-underline">
+                <a href="tel:+385995424763">+385 99 542 4763</a>
+              </span>
             </div>
             <div>
-              <strong>E-mail: </strong
-              ><a class="tekst-crvena" href="mailto:someone@example.com"
-                >omertajdoo@gmail.com</a
-              >
+              <strong>E-mail:</strong><br />
+              <a class="tekst-crvena" href="mailto:omertajdoo@gmail.com">
+                omertajdoo@gmail.com
+              </a>
             </div>
             <div>
-              <strong>Adresa:</strong> Ul. Dobriše Cesarića 14, 43 500 Daruvar
+              <strong>Adresa:</strong><br />
+              Ul. Dobriše Cesarića 14, 43 500 Daruvar
             </div>
             <div class="kontakt-ikone">
-              <span><i class="fa-brands fa-square-facebook fa-xl"></i></span>
-              <span><i class="fa-brands fa-square-instagram fa-xl"></i></span>
-              <span><i class="fa-brands fa-square-whatsapp fa-xl"></i></span>
+              <a
+                href="https://www.facebook.com/omertajdoo"
+                target="_blank"
+                rel="noopener"
+              >
+                <span><i class="fa-brands fa-square-facebook fa-xl"></i></span>
+              </a>
+              <a
+                href="https://www.instagram.com/omertajdoo/?igsh=cXlra3hkeXQ2ZGpp#"
+                target="_blank"
+                rel="noopener"
+              >
+                <span><i class="fa-brands fa-square-instagram fa-xl"></i></span>
+              </a>
+              <a
+                href="https://wa.me/385995424763"
+                target="_blank"
+                rel="noopener"
+              >
+                <span><i class="fa-brands fa-square-whatsapp fa-xl"></i></span>
+              </a>
             </div>
             <div>
-              <strong>Radno vrijeme: </strong>Ponedjeljak-Petak 08:00 - 17:00
+              <strong>Radno vrijeme:</strong><br />
+              Ponedjeljak–Petak 08:00 – 17:00
             </div>
           </div>
         </div>
@@ -238,7 +273,10 @@
       </section>
     </main>
 
-    <footer>© 2025 Omerta j.d.o.o. Sva prava pridržana</footer>
+    <footer>
+      © 2025 <strong style="color: #c62828">Omerta j.d.o.o.</strong> Sva prava
+      pridržana.
+    </footer>
 
     <script>
       function openSidebar() {
